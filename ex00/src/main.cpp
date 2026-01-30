@@ -60,8 +60,8 @@ int main()
 
     std::cout << "\nLETS GO!! the integer to find is: " << *toFind << '\n';
 
-    std::cout << "Lets call easyfind()...\n\n"
-    << "easyfind:: " << easyfind(v, *toFind) << '\n';
+    std::cout << "Call easyfind()...\n\n"
+              << "easyfind:: " << easyfind(v, *toFind) << '\n';
 
     delete toFind;
     return (0);
