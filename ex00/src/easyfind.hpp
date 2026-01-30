@@ -1,3 +1,4 @@
+
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -19,9 +20,17 @@
 #include <climits>
 #include <stdlib.h> //strtod
 #include <cmath>    //isnan
-#include <climits>
 #include <limits>
 #include <algorithm>
+
+class NotFindException : public std::exception
+    {
+    public:
+        const char *what() const throw()
+        {
+            return "!!!NOT FIND SORRY!!!";
+        }
+    };
 
 template <typename T>
 int easyfind(T &cont, int &toFind)
@@ -29,10 +38,7 @@ int easyfind(T &cont, int &toFind)
     typename T::const_iterator it;
     it = std::find(cont.begin(), cont.end(), toFind);
     if (it == cont.end())
-    {
-        throw 
-        return (0);
-    }
+        throw NotFindException();
     return (*it);
 }
 
