@@ -17,16 +17,23 @@
 #include <vector>
 #include <string>
 #include <climits>
-#include <stdlib.h>	//strtod
-#include <cmath> 	//isnan
+#include <stdlib.h> //strtod
+#include <cmath>    //isnan
 #include <climits>
 #include <limits>
+#include <algorithm>
 
-template<typename T>
-int easyfind(T container, int &toFind){
-    (void) container;
-    return (toFind);
+template <typename T>
+int easyfind(T &cont, int &toFind)
+{
+    typename T::const_iterator it;
+    it = std::find(cont.begin(), cont.end(), toFind);
+    if (it == cont.end())
+    {
+        throw 
+        return (0);
+    }
+    return (*it);
 }
 
-
-#endif //EASYFIND_HPP
+#endif // EASYFIND_HPP
