@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: thodavid <thodavid@student.42.fr>          +#+  +:+       +#+         #
+#    By: kobe <kobe@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/05 10:21:59 by thodavid          #+#    #+#              #
-#    Updated: 2026/01/22 09:56:56 by thodavid         ###   ########.fr        #
+#    Updated: 2026/01/29 11:37:33 by kobe             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #####
 #Var#
 #####
-NAME		= ex00
+NAME		= easyfind
 FLAGS		= -Wall -Wextra -Werror -std=c++98 -MMD -MP
 DEP			= ($(OBJ):.o=.d)
 SRCDIR		= src
