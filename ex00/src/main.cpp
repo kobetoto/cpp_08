@@ -60,8 +60,15 @@ int main()
 
     std::cout << "\nLETS GO!! the integer to find is: " << *toFind << '\n';
 
-    std::cout << "Call easyfind()...\n\n"
-              << "easyfind:: " << easyfind(v, *toFind) << '\n';
+    try
+    {
+        int rslt = easyfind(v, *toFind);
+        std::cout << "Call easyfind()...\n\n"
+        << "easyfind:: " << rslt << '\n';
+    }
+    catch(std::exception &e){
+		std::cerr << e.what() << "\n";
+    }
 
     delete toFind;
     return (0);
